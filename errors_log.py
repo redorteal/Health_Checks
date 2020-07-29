@@ -10,3 +10,5 @@ for log in logs:
     pattern = r"([\w\.]*)([\[\]\w :]) [ERROR]"
     if "ERROR" in log:
         result = re.search(pattern, log)
+        print("This service failed due to error: {}".format(result[1]))
+        
